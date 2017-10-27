@@ -1,0 +1,20 @@
+#!bin/sh
+NUM_RUNS=$1
+COUNTER=0
+FLUIDDIR="data"
+mkdir $FLUIDDIR
+until [ $COUNTER -gt $NUM_RUNS ]; do
+	echo $COUNTER
+	FLUIDDIR="data/sample_$COUNTER"
+	mkdir $FLUIDDIR
+
+	python modify.py $COUNTER
+
+	SU2_CFD lam_NACA0012.cfg
+
+	cp -r flow.vtk $FLUIDDIR/flow.vtk
+
+	rm *.vtk
+
+	let COUNTER+=1
+done
