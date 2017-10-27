@@ -3,7 +3,7 @@ from paraview.simple import *
 # disable automatic camera reset on 'Show'
 paraview.simple._DisableFirstRenderCameraReset()
 
-for i in range(25):
+for i in range(225):
     file_name = '/Users/yeswanthcheekati/Downloads/SU2-5.0.0/samp/airfoil/data/sample_' + \
         str(i)+'/flow.vtk'
     # create a new 'Legacy VTK Reader'
