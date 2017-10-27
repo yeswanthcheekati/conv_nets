@@ -5,7 +5,7 @@
 ## Changes
 ### Use of tanh instead of relu for better accuracy
 ### Use of Conditional Variational Autoencoders instead of plain CNN
-### Ouput is Mach Number instead of x,y components of Velocity
+### Ouput is Mach Number instead of x,y components of Velocity i.e. no bifurcation of the network
 
 ## Additions
 ### Implementation of Boundary conditions and changes in the simulation accordingly ('u' is an input paramter)
